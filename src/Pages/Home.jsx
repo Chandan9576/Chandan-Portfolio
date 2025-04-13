@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import About from "./About";
 import Skills from "./Skills";
 import Education from "./Education";
@@ -7,11 +6,7 @@ import Contact from "./Contact";
 import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
-  const nevigate = useNavigate();
-
-  const contactRutePath = () => {
-    nevigate("/Contact");
-  };
+  
   return (
     <>
       <div className="h-auto md:h-screen w-full flex flex-col-reverse items-center px-10 justify-evenly gap-15 md:gap-0 pt-40 md:pt-0 md:flex-row ">
@@ -33,9 +28,9 @@ const Home = () => {
           <div className="flex mt-5 gap-x-8">
             <button
               className="h-10 w-32 bg-[#d1fa02] text-xl font-semibold text-black rounded-md md:h-12 md:w-35 hover:scale-110 duration-300 hover:shadow-[0_0_20px_rgba(209,250,2,1)] cursor-pointer"
-              onClick={contactRutePath}
+              
             >
-              Contact Me !
+              <a href="#contact">Contact Me !</a>
             </button>
 
             <button className="h-10 w-32 border-2 border-[#d1fa02] text-xl font-semibold text-[#d1fa02] rounded-md md:h-12 md:w-35 hover:scale-110 duration-300 hover:shadow-[0_0_20px_rgba(209,250,2,1)] hover:bg-[#d1fa02] hover:text-black cursor-pointer">

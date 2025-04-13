@@ -1,12 +1,16 @@
 import { FaBars } from "react-icons/fa";
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState,useRef} from "react";
 import { ImCross } from "react-icons/im";
 import { GoTriangleRight } from "react-icons/go";
 
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const sectionRef = useRef(null);
+
+  const scrollToSection = () => {
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <>
@@ -16,36 +20,37 @@ const Header = () => {
 
           <div className="hidden text-xl font-semibold md:flex gap-x-10 ">
             <ul className="space-x-10 text-white">
-              <NavLink
-                to="home"
+              <a
+                href="#home"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200"
               >
                 Home
-              </NavLink>
-              <NavLink
-                to="education"
+              </a>
+              <a
+                href="#education"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200"
               >
                 Education
-              </NavLink>
-              <NavLink
-                to="skills"
+              </a>
+              <a
+                href="#skills"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200"
               >
                 Skills
-              </NavLink>
-              <NavLink
-                to="about"
+              </a>
+              <a
+                href="#about"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200"
+                onClick={scrollToSection}
               >
                 About
-              </NavLink>
-              <NavLink
-                to="contact"
+              </a>
+              <a
+                href="#contact"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200"
               >
                 Contact
-              </NavLink>
+              </a>
             </ul>
           </div>
 
@@ -63,36 +68,36 @@ const Header = () => {
 
         <div>
         <ul className="text-white flex flex-col space-y-5 ml-10 mt-25 text-[20px] font-semibold">
-              <Link
-                to="/"
+              <a
+                href="#"
                 className="focus:text-[#d1fa02]  hover:text-[#d1fa02] duration-200" onClick={()=>setOpen(false)}
               >
                 Home
-              </Link>
-              <Link
-                to="/Education"
+              </a>
+              <a
+                href="#education"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200" onClick={()=>setOpen(false)}
               >
                 Education
-              </Link>
-              <Link
-                to="/Skills"
+              </a>
+              <a
+                href="#skills"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200" onClick={()=>setOpen(false)}
               >
                 Skills
-              </Link>
-              <Link
-                to="/About"
+              </a>
+              <a
+                href="#about"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200" onClick={()=>setOpen(false)}
               >
                 About
-              </Link>
-              <Link
-                to="/Contact"
+              </a>
+              <a
+                href="#contact"
                 className="focus:text-[#d1fa02] hover:text-[#d1fa02] duration-200" onClick={()=>setOpen(false)}
               >
                 Contact
-              </Link>
+              </a>
             </ul>
         </div>
 
