@@ -35,7 +35,7 @@ const About = () => {
               devloper. I am from Jharkhand. I have completed my
               intermediate(Science stream) from +2 Virendra HiGh School Doranda
               and currently I am doing B.Sc IT From Marwadi college Ranchi,
-              Jharkhand. Thank u <span className="text-red-700 text-2xl">&#x2665;</span>
+              Jharkhand. Thank you <span className="text-red-700 text-2xl">&#x2665;</span>
             </p>
 
             <div className="flex  gap-x-2 md:gap-x-5 mt-5 text-white ">

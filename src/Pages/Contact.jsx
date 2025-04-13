@@ -70,7 +70,6 @@ const Contact = () => {
       setFormData({ ...formData, [name]: value });
       setEmailError("");
     }
-    console.log(formData);
   };
 
   return (
