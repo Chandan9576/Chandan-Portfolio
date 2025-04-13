@@ -3,12 +3,11 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import contact1img from "../assets/Image/contact1.png"
 
 const About = () => {
   return (
     <>
-      <div className=" font-roboto pt-30 px-10">
+      <div className=" font-roboto pt-30 px-10 md:h-screen">
         <div>
           <h1 className="text-4xl text-center font-bold md:text-6xl text-[#d1fa02]">
             About Me !
