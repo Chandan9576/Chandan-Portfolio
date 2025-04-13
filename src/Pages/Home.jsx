@@ -34,7 +34,7 @@ const Home = () => {
             </button>
 
             <button className="h-10 w-32 border-2 border-[#d1fa02] text-xl font-semibold text-[#d1fa02] rounded-md md:h-12 md:w-35 hover:scale-110 duration-300 hover:shadow-[0_0_20px_rgba(209,250,2,1)] hover:bg-[#d1fa02] hover:text-black cursor-pointer">
-              Hire me !
+              <a href="mailto:chandan95765@gmail.com" target="_blank">Hire me !</a>
             </button>
           </div>
         </div>

@@ -7,6 +7,7 @@ import Skills from "./Pages/Skills";
 import Education from "./Pages/Education";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,6 +42,10 @@ function App() {
       <section id="contact">
         <Contact />
       </section>
+      <section id="footer">
+        <Footer />
+      </section>
+
     </>
   );
 }

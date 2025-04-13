@@ -1,8 +1,8 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import { IoLogoLinkedin } from "react-icons/io";
 
 const About = () => {
   return (
@@ -47,8 +47,8 @@ const About = () => {
                 <FaFacebook className="border-2 border-[#d1fa02] rounded-full p-1.5 h-10 w-10 hover:text-blue-600 duration-300 hover:scale-120 " />
               </a>
 
-              <a href="" target="_blank">
-                <FaTelegram className="border-2 border-[#d1fa02] rounded-full p-1.5 h-10 w-10 hover:text-[#0fc1f2] duration-300 hover:scale-120" />
+              <a href="https://www.linkedin.com/feed/" target="_blank">
+              <IoLogoLinkedin className="border-2 border-[#d1fa02] rounded-full p-1.5 h-10 w-10 hover:text-[#087fc9] duration-300 hover:scale-120 "/>
               </a>
 
               <a href="https://github.com/" target="_blank">
