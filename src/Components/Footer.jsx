@@ -7,6 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
+    
       <div className="text-white w-full h-40 flex justify-center  bg-gray-800 items-center">
         <footer>
           <span>
