@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import contact1img from "../assets/Image/contact1.png"
 
 const About = () => {
   return (
@@ -18,7 +19,7 @@ const About = () => {
         </div>
 
         <div className=" w-full flex flex-wrap items-center justify-evenly gap-y-12 mt-15">
-          <div className="h-80 w-70  rounded-4xl hover:scale-110 duration-300 shadow-[0_0_50px_rgba(209,250,2,1)] md:h-90 md:w-80  bg-[url(/public/Image/chandan1.png)] bg-cover bg-no-repeat border-2 border-[#d1fa02] "></div>
+          <div className="h-80 w-70  rounded-4xl hover:scale-110 duration-300 shadow-[0_0_50px_rgba(209,250,2,1)] md:h-90 md:w-80  bg-[url(/public/chandan1.png)] bg-cover bg-no-repeat border-2 border-[#d1fa02] "></div>
 
           <div className="h-auto w-full md:w-150 mb-20">
             <h1 className="">

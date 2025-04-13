@@ -39,7 +39,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" bg-[#d5fa02] h-70 w-70 border-3 md:w-95 md:h-95 border-black rounded-full   shadow-[0_0_100px_rgba(209,250,2,1)] hover:scale-107 duration-300 bg-[url(/public/Image/chandan4.png)] bg-cover bg-no-repeat "></div>
+        <div className=" bg-[#d5fa02] h-70 w-70 border-3 md:w-95 md:h-95 border-black rounded-full   shadow-[0_0_100px_rgba(209,250,2,1)] hover:scale-107 duration-300 bg-[url(/public/chandan4.png)] bg-cover bg-no-repeat "></div>
       </div>
   
       

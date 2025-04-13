@@ -3,7 +3,8 @@ import { SiWhatsapp } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoMdMailOpen } from "react-icons/io";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import Contactimg from "../assets/Image/Contact.png"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,23 +19,28 @@ const Contact = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-  
-    if (!formData.Name || !formData.Email || !formData.Contact || !formData.Message) {
+
+    if (
+      !formData.Name ||
+      !formData.Email ||
+      !formData.Contact ||
+      !formData.Message
+    ) {
       alert("Please fill out all fields.");
       return;
     }
-  
+
     const serviceId = "service_h3c0khq";
     const templateid = "template_v4mprnl";
     const publicKey = "N3hmabd-5wbOCl6VH";
-  
+
     const templateParams = {
       fromName: formData.Name,
       fromEmail: formData.Email,
       fromContact: formData.Contact,
       fromMessage: formData.Message,
     };
-  
+
     emailjs
       .send(serviceId, templateid, templateParams, publicKey)
       .then((response) => {
@@ -47,48 +53,22 @@ const Contact = () => {
         alert("Failed to send email. Please try again later.");
       });
   };
-  // const handleOnSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   const serviceId = "service_h3c0khq";
-  //   const templateid = "template_v4mprnl";
-  //   const publicKey = "N3hmabd-5wbOCl6VH";
-
-  //   const templateParams = {
-  //     formName: formData.Name,
-  //     fromEmail: formData.Email,
-  //     fromContact: formData.Contact,
-  //     fromMesasage: formData.Message,
-  //   };
-
-  //   emailjs.send(serviceId,templateid,templateParams,publicKey)
-  //   .then((Response)=>{
-  //     alert("email sent successfull",Response);
-  //     setFormData({Name:"",Email:"",Contact:"",Message:""});
-  //   })
-
-  //   .catch((error)=>{
-  //     console.error("Error sending:",error);
-  //   })
-  // };
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
 
     if (name === "Name" || name === "Message") {
       setFormData({ ...formData, [name]: value });
-    } 
-    else if (name === "Contact") {
+    } else if (name === "Contact") {
       if (/^\d*$/.test(value) && value.length <= 10) {
         setFormData({ ...formData, [name]: value });
         setContactError("");
       } else {
         setContactError("Please enter valid contact number");
       }
-    } 
-    else if (name === "Email") {
-        setFormData({ ...formData, [name]: value });
-        setEmailError("");
+    } else if (name === "Email") {
+      setFormData({ ...formData, [name]: value });
+      setEmailError("");
     }
     console.log(formData);
   };
@@ -108,7 +88,7 @@ const Contact = () => {
         <div className=" w-full flex flex-wrap justify-center items-center md:justify-evenly gap-y-5 pt-5">
           <div className="">
             <img
-              src="/public/Image/Contact.png"
+              src={Contactimg}
               alt=""
               className="size-90 md:size-130 hover:-translate-y-5 duration-400 drop-shadow-[2px_0_20px_rgba(209,250,2,1)]"
             />

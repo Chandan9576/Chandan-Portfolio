@@ -1,4 +1,8 @@
 import React from "react";
+import webimg from "../assets/Image/web.png"
+import scienceimg from "../assets/Image/science.png"
+import databaseimg from "../assets/Image/database.png"
+import structureimg from "../assets/Image/structure.png"
 
 const Skills = () => {
   return (
@@ -18,7 +22,7 @@ const Skills = () => {
           <div className="h-50 w-85 bg-gray-800 flex items-center flex-col text-2xl font-semibold rounded-2xl md:h-100 md:w-75 hover:scale-105 duration-400 border-2 hover:border-[#d1fa02] ">
             <img
               className="size-18 mt-2 md:mt-10 "
-              src="public\Image\web.png"
+              src={webimg}
               alt=""
             />
 
@@ -33,7 +37,7 @@ const Skills = () => {
           <div className="h-50 w-85 bg-gray-800 flex items-center flex-col text-2xl font-semibold rounded-2xl md:h-100 md:w-75 hover:scale-105 duration-400  border-2 hover:border-[#d1fa02] ">
             <img
               className="size-18 mt-2 md:mt-10 "
-              src="public\Image\database-configuration (1).png"
+              src={databaseimg}
               alt=""
             />
 
@@ -48,7 +52,7 @@ const Skills = () => {
           <div className="h-50 w-85 bg-gray-800 flex items-center flex-col text-2xl font-semibold rounded-2xl md:h-100 md:w-75 hover:scale-105 duration-400  border-2 hover:border-[#d1fa02] ">
             <img
               className="size-18 mt-2 md:mt-10 "
-              src="public\Image\science.png"
+              src={scienceimg}
               alt=""
             />
 
@@ -64,7 +68,7 @@ const Skills = () => {
           <div className="h-50 w-85 bg-gray-800 flex items-center flex-col text-2xl font-semibold rounded-2xl md:h-100 md:w-75 hover:scale-105 duration-400   border-2 hover:border-[#d1fa02] ">
             <img
               className="size-18 mt-2 md:mt-10"
-              src="public\Image\structure.png "
+              src={structureimg}
               alt=""
             />
 
