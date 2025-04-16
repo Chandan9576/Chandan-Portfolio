@@ -91,7 +91,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="font-roboto pt-30 px-10">
+      <div className="font-roboto pt-30 ">
         <div>
           <h1 className="text-4xl text-center font-bold md:text-6xl text-[#d1fa02]">
             Contact Us !

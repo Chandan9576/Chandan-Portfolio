@@ -7,7 +7,7 @@ import structureimg from "../assets/Image/structure.png"
 const Skills = () => {
   return (
     <>
-      <div className="h-auto  w-full font-roboto pt-30 ">
+      <div className="h-auto  w-full font-roboto pt-30 px-10">
         <div>
           <h1 className="text-4xl text-center font-bold md:text-6xl text-[#d1fa02]">
             My Skills !

@@ -26,7 +26,7 @@ const Footer = () => {
               <FaFacebook className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#c90808] duration-300 hover:scale-120 inline-block m-5" />
             </a>
             |
-            <a href="mailto:chandan95765@gmail.com" target="_blank">
+            <a href="mailto:chandan95765@gmail.com">
               <IoMdMailOpen className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#c90808] duration-300 hover:scale-120 inline-block m-5" />
             </a>
           </span>

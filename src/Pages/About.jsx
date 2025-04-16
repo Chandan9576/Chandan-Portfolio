@@ -7,7 +7,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 const About = () => {
   return (
     <>
-      <div className=" font-roboto pt-30 px-10 md:h-screen">
+      <div className=" w-full md:h-screen font-roboto pt-30 px-10">
         <div>
           <h1 className="text-4xl text-center font-bold md:text-6xl text-[#d1fa02]">
             About Me !
@@ -20,7 +20,7 @@ const About = () => {
         <div className=" w-full flex flex-wrap items-center justify-evenly gap-y-12 mt-15">
           <div className="h-80 w-70  rounded-4xl hover:scale-110 duration-300 shadow-[0_0_50px_rgba(209,250,2,1)] md:h-90 md:w-80  bg-[url(/public/chandan1.png)] bg-cover bg-no-repeat border-2 border-[#d1fa02] "></div>
 
-          <div className="h-auto w-full md:w-150 mb-20">
+          <div className="h-auto w-full md:w-150 text-center md:text-start ">
             <h1 className="">
             <TypeAnimation
               sequence={["Full Stack Web Devloper.",1000,"Software Devloper.",1000]}
