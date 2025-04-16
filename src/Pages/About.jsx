@@ -40,7 +40,7 @@ const About = () => {
 
             <div className="flex  gap-x-2 md:gap-x-5 mt-5 text-white ">
               <button className="h-12 w-40 border-2 border-[#d1fa02] rounded-lg md:text-[18px] mr-10 hover:bg-[#d1fa02] hover:text-black duration-300 font-semibold cursor-pointer text-[15px]">
-                <a href="" target="_blank">Download CV</a>
+                <a href="https://app.luminpdf.com/viewer/67ff3e3443051314ced38aa6" target="_blank">Download CV</a>
               </button>
 
               <a href="https://www.facebook.com/share/1BqXVD48f9/" target="_blank">

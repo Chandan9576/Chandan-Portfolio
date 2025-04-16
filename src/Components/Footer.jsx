@@ -12,22 +12,22 @@ const Footer = () => {
         <footer>
           <span>
             <a href="https://www.linkedin.com/feed/" target="_blank">
-              <FaLinkedinIn className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#087fc9] duration-300 hover:scale-120 inline-block m-5" />
+              <FaLinkedinIn className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#c90808] duration-300 hover:scale-120 inline-block m-5" />
             </a>
             |
             <a href="https://github.com/" target="_blank">
-              <FaGithub className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#087fc9] duration-300 hover:scale-120 inline-block m-5" />
+              <FaGithub className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#c90808] duration-300 hover:scale-120 inline-block m-5" />
             </a>
             |
             <a
               href="https://www.facebook.com/share/1BqXVD48f9/"
               target="_blank"
             >
-              <FaFacebook className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-blue-600 duration-300 hover:scale-120 inline-block m-5" />
+              <FaFacebook className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#c90808] duration-300 hover:scale-120 inline-block m-5" />
             </a>
             |
             <a href="mailto:chandan95765@gmail.com" target="_blank">
-              <IoMdMailOpen className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#087fc9] duration-300 hover:scale-120 inline-block m-5" />
+              <IoMdMailOpen className="border-2 border-[#d1fa02] rounded-md p-1.5 h-10 w-10 hover:text-[#c90808] duration-300 hover:scale-120 inline-block m-5" />
             </a>
           </span>
           <h1 className="text-4xl text-center font-semibold ">Thanks..!</h1>

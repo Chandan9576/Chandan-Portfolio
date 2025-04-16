@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoMdMailOpen } from "react-icons/io";
 import emailjs from "@emailjs/browser";
-import Contactimg from "../assets/Image/Contact.png"
+import Contactimg from "../assets/Image/Contact.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,35 +23,43 @@ const Contact = () => {
     if (
       !formData.Name ||
       !formData.Email ||
-      !formData.Contact ||
-      !formData.Message
+      !formData.Contact || !formData.Message
     ) {
       alert("Please fill out all fields.");
       return;
+    } 
+
+    else if(formData.Contact.length===10)
+    {
+      const serviceId = "service_h3c0khq";
+      const templateid = "template_v4mprnl";
+      const publicKey = "N3hmabd-5wbOCl6VH";
+
+      const templateParams = {
+        fromName: formData.Name,
+        fromEmail: formData.Email,
+        fromContact: formData.Contact,
+        fromMessage: formData.Message,
+      };
+
+      emailjs
+        .send(serviceId, templateid, templateParams, publicKey)
+        .then((response) => {
+          alert("Email sent successfully!");
+          console.log("Email response:", response);
+          setFormData({ Name: "", Email: "", Contact: "", Message: "" });
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+          alert("Failed to send email. Please try again later.");
+        });
     }
-
-    const serviceId = "service_h3c0khq";
-    const templateid = "template_v4mprnl";
-    const publicKey = "N3hmabd-5wbOCl6VH";
-
-    const templateParams = {
-      fromName: formData.Name,
-      fromEmail: formData.Email,
-      fromContact: formData.Contact,
-      fromMessage: formData.Message,
-    };
-
-    emailjs
-      .send(serviceId, templateid, templateParams, publicKey)
-      .then((response) => {
-        alert("Email sent successfully!");
-        console.log("Email response:", response);
-        setFormData({ Name: "", Email: "", Contact: "", Message: "" });
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-        alert("Failed to send email. Please try again later.");
-      });
+    else
+    {
+      alert("Contact should be 10 digit")
+    }
+    
+      
   };
 
   const handleOnChange = (e) => {
@@ -60,15 +68,24 @@ const Contact = () => {
     if (name === "Name" || name === "Message") {
       setFormData({ ...formData, [name]: value });
     } else if (name === "Contact") {
-      if (/^\d*$/.test(value) && value.length <= 10) {
-        setFormData({ ...formData, [name]: value });
+      setFormData({ ...formData, [name]: value });
+
+      if (/^\d*$/.test(value)) {
         setContactError("");
       } else {
         setContactError("Please enter valid contact number");
       }
     } else if (name === "Email") {
       setFormData({ ...formData, [name]: value });
-      setEmailError("");
+
+      if (
+        value === "" ||
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+      ) {
+        setEmailError("");
+      } else {
+        setEmailError("Please enter valid email address");
+      }
     }
   };
 
@@ -100,7 +117,7 @@ const Contact = () => {
             >
               <input
                 type="text"
-                className=" h-15 w-80 md:w-120  rounded-xl pl-5 text-white bg-gray-800"
+                className=" h-15 w-80 md:w-120  rounded-xl pl-5 text-white bg-gray-800  border border-gray-600 focus:border-2 focus:border-[#d1fa02] focus:outline-none"
                 placeholder="Enter your name"
                 value={formData.Name}
                 onChange={handleOnChange}
@@ -108,30 +125,38 @@ const Contact = () => {
                 required
               />
 
-              <input
-                type="text"
-                className=" h-15 w-80 md:w-120  rounded-xl pl-5  text-white bg-gray-800 "
-                placeholder="Enter your phone  "
-                value={formData.Contact}
-                onChange={handleOnChange}
-                name="Contact"
-                required
-              />
-              {/* <p className="text-red-800">{contactError}</p> */}
+              <div>
+                <input
+                  type="text"
+                  className=" h-15 w-80 md:w-120  rounded-xl pl-5 text-white bg-gray-800  border border-gray-600 focus:border-2 focus:border-[#d1fa02] focus:outline-none"
+                  placeholder="Enter your phone  "
+                  value={formData.Contact}
+                  onChange={handleOnChange}
+                  name="Contact"
+                  required
+                />
+                <p className="text-red-800 text-[18px] font-medium">
+                  {contactError}
+                </p>
+              </div>
 
-              <input
-                type="email"
-                className=" h-15 w-80 md:w-120  rounded-xl pl-5 text-white bg-gray-800 "
-                placeholder="Enter your email"
-                value={formData.Email}
-                onChange={handleOnChange}
-                name="Email"
-                required
-              />
-              {/* <p className="text-red-800">{emailError}</p> */}
+              <div>
+                <input
+                  type="email"
+                  className=" h-15 w-80 md:w-120  rounded-xl pl-5 text-white bg-gray-800  border border-gray-600 focus:border-2 focus:border-[#d1fa02] focus:outline-none"
+                  placeholder="Enter your email"
+                  value={formData.Email}
+                  onChange={handleOnChange}
+                  name="Email"
+                  required
+                />
+                <p className="text-red-800 text-[18px] font-medium">
+                  {emailError}
+                </p>
+              </div>
 
               <textarea
-                className=" h-30 w-80 md:h-20 md:w-120  rounded-xl pl-5  text-white bg-gray-800 pt-2 "
+                className=" h-30 w-80 md:h-20 md:w-120  rounded-xl pl-5  text-white bg-gray-800 pt-2 border-gray-600 focus:border-2 focus:border-[#d1fa02] focus:outline-none"
                 placeholder="Enter your message"
                 value={formData.Message}
                 onChange={handleOnChange}
